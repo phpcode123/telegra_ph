@@ -15,7 +15,7 @@
 
 * 环境：linux + nginx + mysql + php + redis
 * 后端：ThinkPHP6.0
-* 前端：Tabler + Bootstrap + jQuery
+* 前端：Tabler + Bootstrap + jQuery + TinyMCE
 > 运行环境LNMP，建议php7.4，mysql5.7 
 
 
