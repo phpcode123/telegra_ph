@@ -1,0 +1,53 @@
+{include file='header'}
+
+<div class="col-12">
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">数据统计 </span>
+    </div>
+    <div class="table-responsive">
+      <table class="table card-table table-vcenter text-nowrap datatable  table-hover">
+        <thead>
+          <tr>
+            <th>日期</th>
+            <th>当天总量</th>
+            <th>当天PC端量</th>
+            <th>当天M端量</th>
+            <th>当天广告面量</th>
+            <th>当天生成URL量</th>
+          </tr>
+        </thead>
+        <tbody>
+          {volist name="list" id="vo" empty="" }
+          {if $vo.date_time eq $today_datetime and $page_num eq 1}
+            <tr>
+              <td><span class="text-muted">{$vo.date_time}</span></td>
+              <td>{$vo.all_clicks}</td>
+              <td>{$vo.pc_clicks}</td>
+              <td>{$vo.m_clicks}</td>
+              <td>{$vo.middle_page_clicks}</td>
+              <td>{$vo.short_url}</td>
+            </tr>
+          {/if}
+          {/volist}
+          {volist name="data_list" id="vo" empty="" }
+            <tr>
+              <td><span class="text-muted">{$vo.date_time}</span></td>
+              <td>{$vo.all_clicks}</td>
+              <td>{$vo.pc_clicks}</td>
+              <td>{$vo.m_clicks}</td>
+              <td>{$vo.middle_page_clicks}</td>
+              <td>{$vo.short_url}</td>
+            </tr>
+          {/volist}
+
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer d-flex align-items-center">
+        {$data_list|raw}
+    </div>
+  </div>
+</div>
+
+{include file='footer'}

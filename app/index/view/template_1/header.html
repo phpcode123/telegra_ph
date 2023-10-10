@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{$title|raw}</title>
+<meta name="keywords" content="{$keywords|raw}">
+<meta name="description" content="{$description|raw}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<meta property="og:title" content="{$title}">
+<meta property="og:url" content="{$domain_url}<?php if(isset($data[0]['short_str'])){echo $data[0]['short_str'];}?>">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{$domain_url}static/image/logo-small.svg">
+{load href="/static/css/style.css" /}
+{load href="/static/css/bootstrap.min.css" /}
+{load href="/static/js/jQuery.js" /}
+
+
+</head>
+<body>

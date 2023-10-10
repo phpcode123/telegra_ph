@@ -1,0 +1,19 @@
+{include file='header'}
+<div class="manage_article_add">
+<form method="post" action="/{$admin_path}?s=domain/addpost">
+<ul><li class="menunav"><p>当前位置:域名管理 > 添加域名</p></li></ul>
+<ul><li class="lileft"><p>http_prefix</p></li><li class="liright"><input name="http_prefix" class="input600" value="https://" type="text"><p>如:https://  此类站点必须强制全部https化</p></li></ul>
+<ul><li class="lileft"><p>domain_url</p></li><li class="liright"><input name="domain_url" class="input600" value="" type="text"><p>如:baidu.com 不要https前缀 ,不要以/结尾，最好不带www</p></li></ul>
+<ul><li class="lileft"><p>site_name</p></li><li class="liright"><input name="site_name" class="input600" value="" type="text"><p>用于全站调用</p></li></ul>
+<ul><li class="lileft"><p>index_title</p></li><li class="liright"><input name="index_title" class="input600" value="" type="text"><p>首页标题</p></li></ul>
+<ul><li class="lileft"><p>index_keyword</p></li><li class="liright"><input name="index_keyword" class="input600" value="" type="text"><p>首页关键词</p></li></ul>
+<ul><li class="lileft"><p>index_description</p></li><li class="liright"><input name="index_description" class="input600" value="" type="text"><p>首页描述</p></li></ul>
+<ul><li class="lileft"><p>display_ad</p></li><li class="liright"><input name="display_ad" class="input600" value="1" type="text"><p>是否显示页面广告 1为显示，0为不显示，数据库默认值为1</p></li></ul>
+<ul><li class="lileft"><p>sitemap</p></li><li class="liright"><input name="sitemap" class="input600" value="0" type="text"><p>是否生成sitemap，1为生成，0为不生成(点击后台的网站地图进行生成，txt文件在public目录下)</p></li></ul>
+<ul><li class="lileft"><p>template_num</p></li><li class="liright"><input name="template_num" class="input600" value="1" type="text"><p>当前域名调用的模板编号，默认从1开始，数据库默认值为1，按实际需求填</p></li></ul>
+<ul><li class="lileft"><p>note</p></li><li class="liright"><input name="note" class="input600" value="" type="text"><p>域名特殊情况备注，正常留空。</p></li></ul>
+<ul><li class="lileft"><p></p></li><li class="liright"><input type="submit" class="btn" value="Submit"></li></ul>
+</form>
+<div class="clear"></div>
+</div>
+{include file='footer'}

@@ -1,0 +1,43 @@
+{include file="$template_header" /}
+<div class="container-xl max-width-box mt-50">
+
+    <div class="row  position-relative">
+        {include file="/template_1/header_menu"/}
+    </div>
+
+
+    <div class="col-xl-12">
+<h1>Report Malicious URL</h1>
+<p>Use the form below to report URLs that are distributing spam and malware. Help us by sending links that are against our terms of use, we will delete and block these note. If spammers are sending you e-mails containing our shortened URLs, tell us and we can take quick action to avoid the distribution of inappropriate links.</p>
+<form name="formContact" method="post" action="/report-malicious">
+
+    
+    <div class="mb-3">
+        <label  class="form-label"><strong>Report Malicious URL</strong></label>
+        <input type="text" class="form-control" name="url" value="" placeholder="">
+    </div>
+    <div class="mb-3">
+        <label  class="form-label"><strong>Comment </strong></label>
+        <textarea class="form-control" name="comment" rows="3" placeholder="Comment"></textarea>
+    </div>
+    <div class="mb-3">
+        <label  class="form-label"><strong>E-Mail </strong></label>
+        <input type="text" class="form-control" name="email" value="" placeholder="Your mail">
+    </div>
+    <input name="cptc_number_1" type="hidden" value="{$cptc_number_1}">
+    <input name="cptc_number_2" type="hidden" value="{$cptc_number_2}">
+
+    <label class="form-label"><strong>Verification</strong></label>
+    <div class="input-group mb-3">
+        <span class="input-group-text" >{$cptc_number_1} + {$cptc_number_2} = </span>
+        <input type="text" class="form-control" name="cptc" value="" id="basic-url" aria-describedby="basic-addon3">
+    </div>
+
+    <button type="submit" class="btn btn-success mb-3">Sumbit</button>
+</form>
+
+
+
+</div>
+</div>
+{include file="$template_footer" /}

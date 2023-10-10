@@ -1,0 +1,34 @@
+        </div>
+    </div>
+</div>
+{load href="/static/tinymce/tinymce.min.js" /}
+<script>
+    tinymce.init({
+        selector: '#editor',
+        toolbar: false,
+        menubar: false,
+        inline: true,
+        plugins: 'quickbars link table media image codesample lists code ',
+        quickbars_selection_toolbar: 'bold underline  strikethrough italic forecolor backcolor blockquote removeformat | link | alignleft aligncenter alignright fontsize',
+        quickbars_insert_toolbar: 'image media numlist bullist hr table codesample code',
+        contextmenu:"",
+        autosave_ask_before_unload: false,
+        images_upload_url: '/upload',
+        images_upload_base_path: '/',
+        content_style: "img {max-width:100%;}",
+        statusbar: false,
+        media_live_embeds: true,
+        codesample_languages: [
+            {text: 'DEFAULT CODE', value: 'markup'},
+            {text: 'TEXT WORD PRE ', value: 'text-pre'},
+            {text: 'TEXT WORD PRE WRAP', value: 'text-pre-wrap'},
+        ],
+        relative_urls : false,
+        remove_script_host : true,
+        document_base_url : '/'
+    });
+</script>
+{load href="/static/js/prism.js" /}
+{load href="/static/css/prism.css" /}
+</body>
+</html>

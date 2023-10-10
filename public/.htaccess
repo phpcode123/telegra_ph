@@ -1,0 +1,14 @@
+#note.gd 20221101
+rewrite "^/index$" /index.php/index/index/index last;
+rewrite "^/index_post$" /index.php/index/index/index_post last;
+rewrite "^/edit/(\w+)$" /index.php/index/article_edit/edit?short_str=$1 last;
+rewrite "^/edit_post$" /index.php/index/article_edit/edit_post last;
+rewrite "^/upload$" /index.php/index/upload/index last;
+rewrite "^/report-malicious$" /index.php/index/report_malicious/index last;
+rewrite "^/contact$" /index.php/index/contact/index last;
+rewrite "^/redirect$" /index.php/index/redirect/index last;
+rewrite "^/redirect_post$" /index.php/index/redirect/index_post last;
+
+
+#这个只能放在最后行
+rewrite "^/(\w+)$" /index.php/index/article_show/index?short_str=$1 last;

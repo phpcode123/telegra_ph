@@ -1,0 +1,36 @@
+{include file='header'}
+
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            <span class="card-title">自定义short_str <span class="page-pretitle">(用于更改Note的short_str)</span> </span>
+        </div>
+
+        <div class="card-body">
+            <div class="col-md-5 col-12">
+                <div class="mb-3">
+                    <form method="post" action="/{$admin_path}/article/customize_short_str_post">
+                        <label class="form-label page-pretitle">自定义short_str（输入要更改的Note的Itemid和更改后的short_str，未作short_str验证，自定义short_str时一定要确保该字符串未被使用）</label>
+                    
+                            <div class="mb-3">
+                              <label class="form-label required">itemid</label>
+                              <input type="text" class="form-control" name="itemid" autocomplete="off" placeholder="input your itemid">
+                            </div>
+                            <div class="mb-3">
+                              <label class="form-label required">short_str</label>
+                              <input type="text" class="form-control" name="short_str" autocomplete="off" placeholder="input your short_str">
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{include file='footer'}

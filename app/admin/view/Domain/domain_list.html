@@ -1,0 +1,50 @@
+{include file='header'}
+
+<div class="col-12">
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">域名管理 > 域名列表 </span>
+    </div>
+    <div class="table-responsive">
+      <table class="table card-table table-vcenter text-nowrap datatable  table-hover">
+        <thead>
+          <tr>
+            <th>itemid</th>
+            <th>edit</th>
+            <th>http_prefix</th>
+            <th>domain_url</th>
+            <th>site_name</th>
+            <th>display_ad</th>
+            <th>sitemap</th>
+            <th>template_num</th>
+            <th>note</th>
+            <th>delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          {volist name="list" id="vo" empty="" }
+
+            <tr>
+              <td>{$vo.itemid}</td>
+              <td><a href="/{$admin_path}/domain/edit?itemid={$vo.itemid}">[=]</a></td>
+              <td>{$vo.http_prefix}</td>
+              <td><a href="{$vo.http_prefix}{$vo.domain_url}" target="_blank">{$vo.domain_url}</a></td>
+              <td>{$vo.site_name}</td>
+              <td>{$vo.display_ad}</td>
+              <td>{$vo.sitemap}</td>
+              <td>{$vo.template_num}</td>
+              <td>{$vo.note}</td>
+              <td><a href="/{$admin_path}/domain/delete?itemid={$vo.itemid}">[X]</a></td>
+            </tr>
+          {/volist}
+
+        </tbody>
+      </table>
+    </div>
+    <div class="card-footer d-flex align-items-center">
+        {$list|raw}
+    </div>
+  </div>
+</div>
+
+{include file='footer'}

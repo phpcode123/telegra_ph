@@ -1,0 +1,33 @@
+{include file='header'}
+
+<div class="col-12">
+    <div class="card">
+        <div class="card-header">
+            <span class="card-title">自定义cookies <span class="page-pretitle">(用于前端授权编辑非自己创建的Note，原理是在本机前台设置cookies)</span> </span>
+        </div>
+
+        <div class="card-body">
+            <div class="col-md-5 col-12">
+                <div class="mb-3">
+                    <form method="post" action="/{$admin_path}/article/customize_cookies_post">
+                        <label class="form-label page-pretitle">自定义cookies（输入要授权Note的Itemid）</label>
+                    
+                            <div class="mb-3">
+                              <label class="form-label required">itemid</label>
+                              <input type="text" class="form-control" name="itemid" autocomplete="off" placeholder="input your itemid">
+                            </div>
+
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{include file='footer'}
