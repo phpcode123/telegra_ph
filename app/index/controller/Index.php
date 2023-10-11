@@ -17,7 +17,16 @@ class Index extends BaseController
         $Otherclass = new Otherclass($this->app);
 
         $host_data = $Otherclass->getHostData(Request::host());
+        $remote_ip = $Otherclass->get_user_ip();
+        $country = $Otherclass->get_country($remote_ip);
 
+
+        
+        //------------------ black_country begin --------------------
+        if(preg_match("#china#i",$country)){
+            abort(404,"Unsupported for your region.");
+        }
+        //------------------ black_country end --------------------
 
         if(count($host_data) == 0){
             return "Error,  Request::host is not in database, Please try again later.";
@@ -113,8 +122,16 @@ class Index extends BaseController
 
         $data = Request::param();
         $host_data = $Otherclass->getHostData(Request::host());
+        $remote_ip = $Otherclass->get_user_ip();
+        $country = $Otherclass->get_country($remote_ip);
 
 
+        
+        //------------------ black_country begin --------------------
+        if(preg_match("#china#i",$country)){
+            abort(404,"Unsupported for your region.");
+        }
+        //------------------ black_country end --------------------
 
         
         #  ---------------------- 首页是否支持JS渲染验证 begin ----------------------
@@ -128,7 +145,7 @@ class Index extends BaseController
 
 
         # ------------ header  begin ----------------------
-        $remote_ip = $Otherclass->get_user_ip();
+        
         $user_agent = Request::header('User-Agent') ? Request::header('User-Agent') : "none";
         if(isset($_SERVER["HTTP_ACCEPT_LANGUAGE"])){
             $user_language = explode(",", $_SERVER["HTTP_ACCEPT_LANGUAGE"])[0] ? explode(",", $_SERVER["HTTP_ACCEPT_LANGUAGE"])[0] : "none";
@@ -341,7 +358,7 @@ class Index extends BaseController
 
         // }
         # ---------------------  使用guzzlehttp远程请求shortener end ---------------
-        $country = $Otherclass->get_country($remote_ip);
+
 
         # ------------ insert_data begin ----------------------
         $insert_data = [
