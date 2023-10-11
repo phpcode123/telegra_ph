@@ -1,9 +1,13 @@
-# 避免不法份子滥用，此项目删档。
+**避免不法份子滥用，此项目删档。**
 
+  
+   
 
+     
+        
+        
 仿telegra.ph的note笔记程序
 ===============
-
 
 
 
@@ -21,5 +25,3 @@
 > 运行环境LNMP，建议php7.4，mysql5.7 
 
 
-## 配置相关
-* 配置与shortener基本一致，不再赘述。[点击这里阅读](https://github.com/PHPCODE123/shortener)
