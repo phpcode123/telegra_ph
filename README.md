@@ -22,3 +22,9 @@
 
 ## 配置相关
 * 配置与shortener基本一致，不再赘述。[点击这里阅读](https://github.com/PHPCODE123/shortener)
+
+## 项目界面
+* 前台 [演示文本](https://note.gd/WWxzbW)  
+
+![](/public/static/image/index.gif)
+
